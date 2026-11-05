@@ -49,124 +49,233 @@ public class Suma {
 }
 ```
 
-Explica por qué `Suma.java` es código fuente y qué salida esperas obtener antes
-de compilarlo.
+`Suma.java` es el código fuente que se escribe y modifica. El nombre del
+archivo debe coincidir con el de la clase pública `Suma`.
 
 **Respuesta:**
 
-<!-- Escribe aquí tu explicación. -->
+<!-- Explica por qué `Suma.java` es código fuente y qué salida esperas obtener
+antes de compilarlo. -->
 
-## 4. Compilación y generación de bytecode
+## 4. Preparación, compilación y ejecución inicial
 
-Ejecuta el comando siguiente:
+Crea una carpeta para la práctica y trabaja desde una terminal situada en ella.
+Comprueba las versiones de las herramientas y registra el sistema operativo y
+su versión.
+
+Ejecuta:
+
+```bash
+java --version
+javac --version
+javap -version
+```
+
+Después, desde la carpeta que contiene `Suma.java`, ejecuta:
 
 ```bash
 javac Suma.java
 ```
 
-Completa la tabla:
+Si la compilación termina sin errores, comprueba que aparece `Suma.class`.
 
-| Elemento | Tipo o función | Momento en el que interviene | Evidencia |
-|---|---|---|---|
-| `Suma.java` |  |  |  |
-| `javac` |  |  |  |
-| `Suma.class` |  |  |  |
-
-Explica qué diferencia hay entre el código fuente y el bytecode, y por qué
-`Suma.class` no es un ejecutable nativo para una CPU concreta.
-
-**Respuesta:**
-
-<!-- Completa la respuesta. -->
-
-## 5. Ejecución en la JVM
-
-Ejecuta:
+A continuación ejecuta:
 
 ```bash
 java Suma
 ```
 
-Salida inicial:
+Conserva evidencias de las versiones, de la generación de `Suma.class` y de la
+salida inicial.
+
+### Resultados iniciales de los pasos 4.3 y 4.4
+
+**Paso 4.3 — Enunciado:** En la misma carpeta, ejecuta `java Suma` para iniciar el método `main` mediante la JVM y comprueba la salida.
+
+**Resultado:**
 
 ```text
-<!-- Pega aquí la salida. Debería ser «El resultado es: 12». -->
+<!-- Pega aquí la salida. Debe ser «El resultado es: 12». -->
 ```
 
-Responde:
+**Paso 4.4 — Enunciado:** Ejecuta `javap -c Suma` y localiza en `main` instrucciones relacionadas con los valores, la suma y la salida.
 
-- ¿Qué hace la herramienta `java`?
-- ¿Qué papel desempeña la JVM?
-- ¿Qué relación existe entre `Suma.class`, la JVM y el sistema operativo?
-
-**Respuesta:**
-
-<!-- Escribe aquí tus respuestas. -->
-
-## 6. Inspección del bytecode
-
-Ejecuta:
+**Resultado:**
 
 ```bash
-javap -c Suma
+<!-- Escribe el comando utilizado. -->
 ```
 
-Incluye un fragmento de la salida:
+Incluye también un fragmento de la salida de `javap -c Suma`:
 
 ```text
-<!-- Pega aquí el fragmento relevante de `javap -c Suma`. -->
+<!-- Pega aquí el fragmento relevante. -->
 ```
 
-Responde:
+## 5. Ejercicios y entregables
 
-1. ¿Qué instrucciones relacionadas con la suma o la salida puedes identificar?
-2. ¿Por qué la salida de `javap -c` no es código máquina de tu procesador?
-3. ¿Qué información puedes observar y qué información no puedes deducir solo
-   con esta salida?
+### Ejercicio 1: reconocer herramientas y artefactos
+
+**Pregunta 1.a:** Completa una tabla con `Suma.java`, `Suma.class`, `javac`, `java`, `javap` y la JVM.
+
+**Subpregunta 1.a.1:** ¿Qué representa o hace cada elemento?
+
+**Subpregunta 1.a.2:** ¿En qué momento interviene cada elemento?
+
+**Subpregunta 1.a.3:** ¿Cuál es código fuente, cuál es bytecode, cuáles son herramientas y cuál es el entorno de ejecución?
 
 **Respuesta:**
 
-<!-- Completa la respuesta. -->
+Completa la tabla:
 
-## 7. Modificación y reconstrucción
+| Elemento | Tipo o función | Momento en el que interviene |
+|----------|----------------|------------------------------|
+| `Suma.java` |  |  |
+| `Suma.class` |  |  |
+| `javac` |  |  |
+| `java` |  |  |
+| `javap` |  |  |
+| JVM |  |  |
 
-Cambia los valores de `num1` y `num2` a `17` y `25`.
+<!-- Responde también a las tres subpreguntas con la tabla y, si es necesario,
+con una explicación adicional. -->
 
-### 7.1. Predicción
+### Ejercicio 2: proceso de ejecución y portabilidad
 
-- Resultado esperado: <!-- Completa la predicción. -->
-- Motivo por el que hay que volver a compilar: <!-- Completa la explicación. -->
+**Pregunta 2.a:** ¿Qué diferencia hay entre el código fuente y el bytecode de `Suma`?
 
-### 7.2. Comandos y resultados
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 2.b:** ¿Qué hace `javac` y qué hace la herramienta `java`?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 2.c:** ¿Por qué no se ejecuta `Suma.class` directamente haciendo doble clic o escribiendo su nombre como si fuera un programa nativo?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 2.d:** ¿Qué representa `iadd` en la salida de `javap -c`?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 2.d.1:** ¿Por qué esa salida no es código máquina de tu procesador?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 2.e:** ¿Qué aporta la JVM a la portabilidad?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 2.e.1:** ¿Qué debe seguir siendo compatible en el equipo de destino?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Pregunta 2.f:** Compara este proceso con la compilación nativa habitual de C o C++.
+
+**Subpregunta 2.f.1:** ¿Qué artefacto se distribuye en cada caso?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 2.f.2:** ¿Qué tendrías que comprobar para ejecutarlo en otro sistema?
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+### Ejercicio 3: modificar los operandos y reconstruir
+
+**Pregunta 3.a:** Cambia los operandos a `17` y `25`.
+
+**Subpregunta 3.a.1:** Antes de ejecutar, incluye tu predicción del resultado.
+
+**Respuesta:**
+
+- Resultado previsto: <!-- Completa la predicción. -->
+- Justificación: <!-- Explica tu predicción. -->
+
+**Subpregunta 3.a.2:** Explica qué ocurriría si editases `Suma.java` pero ejecutases el `.class` antiguo sin recompilar.
+
+**Respuesta:**
+
+<!-- Escribe tu respuesta. -->
+
+**Subpregunta 3.a.3:** ¿Qué salida obtienes al ejecutar?
+
+**Respuesta:**
+
+```text
+<!-- Pega aquí la salida. Debe ser «El resultado es: 42». -->
+```
+
+**Subpregunta 3.b:** Guarda el fuente, vuelve a compilarlo con `javac` y ejecuta la clase actualizada con `java Suma`. Registra las órdenes.
+
+**Respuesta:**
 
 ```bash
-<!-- Escribe los comandos utilizados para compilar y ejecutar de nuevo. -->
+<!-- Registra aquí las órdenes utilizadas. -->
 ```
 
-Salida después de recompilar:
+<!-- Explica también qué comprobaste al volver a generar Suma.class. -->
 
-```text
-<!-- Pega aquí la salida. Debería ser «El resultado es: 42». -->
-```
+### Ejercicio 4: prácticas generales de trabajo
 
-Explica qué podría ocurrir si modificases `Suma.java` pero ejecutases el archivo
-`.class` antiguo sin volver a compilar.
+**Pregunta 4.a:** Enumera al menos cuatro prácticas generales de trabajo observadas en la actividad y explica cómo ayudan a evitar errores o a reproducir el proceso.
 
 **Respuesta:**
 
-<!-- Completa la respuesta. -->
+| Práctica | Evidencia de esta actividad | Error que ayuda a prevenir |
+|---|---|---|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
-## 8. Portabilidad y requisitos del entorno
+<!-- Puedes añadir más filas si las necesitas. Justifica cada práctica. -->
 
-Explica si bastaría con copiar `Suma.class` a otro equipo para ejecutarlo.
-Indica qué requisitos deben cumplirse y qué papel tienen la versión de la JVM,
-las bibliotecas y las dependencias.
+### Entregable
+
+**Pregunta 5.a:** Entrega `Suma.java` y un `README.md` identificado con tu nombre, módulo, unidad y práctica. Incluye las versiones del entorno, las órdenes utilizadas, la tabla, las respuestas, una captura o transcripción de las dos ejecuciones, un fragmento de `javap -c` y la reflexión sobre las prácticas generales. Adjunta también `Suma.class` o, si el aula no admite archivos binarios, una evidencia verificable de su generación.
 
 **Respuesta:**
 
-<!-- Escribe aquí tu explicación. -->
+Completa esta lista para comprobar tu entrega:
 
-### Ampliación opcional: otro equipo o sistema operativo
+- [ ] He identificado el README con mi nombre, módulo, unidad y práctica.
+- [ ] He incluido las versiones del entorno.
+- [ ] He registrado las órdenes utilizadas.
+- [ ] He completado la tabla y las respuestas.
+- [ ] He incluido una captura o transcripción de las dos ejecuciones.
+- [ ] He incluido un fragmento de `javap -c`.
+- [ ] He conservado `Suma.java`.
+- [ ] He adjuntado `Suma.class` o una evidencia verificable de su generación.
+- [ ] He incluido la reflexión sobre las prácticas generales.
+
+**Comprobación del entregable:**
+
+<!-- Explica cómo has comprobado que el README, Suma.java, Suma.class o su
+evidencia y el resto de materiales están incluidos y son identificables. -->
+
+### Ejercicio 6: ampliación opcional de portabilidad
+
+**Enunciado 6.a:** Intenta ejecutar el mismo `Suma.class` en otro sistema operativo o equipo. Indica qué archivos copiaste, la versión de JVM disponible y si hubo algún requisito de versión o dependencia que afectase al resultado. La prueba en otro sistema es opcional.
+
+**Respuesta:**
 
 | Dato | Valor |
 |---|---|
@@ -176,19 +285,17 @@ las bibliotecas y las dependencias.
 | Resultado |  |
 | Incidencias o requisitos detectados |  |
 
-## 9. Prácticas generales de trabajo
+<!-- Si no realizas la ampliación, indícalo y explica qué requisitos serían
+necesarios para ejecutarlo en otro equipo. -->
 
-Identifica al menos cuatro prácticas transferibles a otros lenguajes o
-herramientas y justifica cómo ayudan a evitar errores o a reproducir el proceso.
+## 6. Reflexión final
 
-| Práctica | Evidencia de esta actividad | Error que ayuda a prevenir |
-|---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+Explica qué has aprendido sobre el código fuente, el bytecode, `javac`, `java`,
+`javap`, la JVM y las condiciones que hacen posible la portabilidad.
 
-## 10. Evidencias
+<!-- Escribe aquí tu reflexión. -->
+
+## 7. Evidencias
 
 Incluye evidencias de:
 
@@ -205,23 +312,3 @@ apartado.
 ```text
 <!-- Añade aquí listados, transcripciones o enlaces a las capturas. -->
 ```
-
-## 11. Reflexión final
-
-Explica qué has aprendido sobre el código fuente, el bytecode, `javac`, `java`,
-`javap`, la JVM y las condiciones que hacen posible la portabilidad.
-
-<!-- Escribe aquí tu reflexión. -->
-
-## 12. Lista de comprobación
-
-- [ ] He completado la identificación y el entorno de trabajo.
-- [ ] He creado y conservado `Suma.java`.
-- [ ] He generado `Suma.class` con `javac`.
-- [ ] He ejecutado el programa y he documentado la salida `12`.
-- [ ] He inspeccionado el bytecode con `javap -c`.
-- [ ] He cambiado los operandos a `17` y `25` y he obtenido `42`.
-- [ ] He explicado el papel de la JVM y los requisitos de portabilidad.
-- [ ] He identificado al menos cuatro prácticas generales de trabajo.
-- [ ] He añadido las evidencias solicitadas.
-- [ ] He escrito la reflexión final.
