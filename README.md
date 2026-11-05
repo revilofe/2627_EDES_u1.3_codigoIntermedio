@@ -88,30 +88,6 @@ java Suma
 Conserva evidencias de las versiones, de la generación de `Suma.class` y de la
 salida inicial.
 
-### Resultados iniciales de los pasos 4.3 y 4.4
-
-**Paso 4.3 — Enunciado:** En la misma carpeta, ejecuta `java Suma` para iniciar el método `main` mediante la JVM y comprueba la salida.
-
-**Resultado:**
-
-```text
-<!-- Pega aquí la salida. Debe ser «El resultado es: 12». -->
-```
-
-**Paso 4.4 — Enunciado:** Ejecuta `javap -c Suma` y localiza en `main` instrucciones relacionadas con los valores, la suma y la salida.
-
-**Resultado:**
-
-```bash
-<!-- Escribe el comando utilizado. -->
-```
-
-Incluye también un fragmento de la salida de `javap -c Suma`:
-
-```text
-<!-- Pega aquí el fragmento relevante. -->
-```
-
 ## 5. Ejercicios y entregables
 
 ### Ejercicio 1: reconocer herramientas y artefactos
@@ -197,6 +173,31 @@ con una explicación adicional. -->
 **Respuesta:**
 
 <!-- Escribe tu respuesta. -->
+
+### Resultados iniciales de los pasos 4.3 y 4.4
+
+**Paso 4.3 — Enunciado:** En la misma carpeta, ejecuta `java Suma` para iniciar el método `main` mediante la JVM y comprueba la salida.
+
+**Resultado:**
+
+```text
+<!-- Pega aquí la salida. Debe ser «El resultado es: 12». -->
+```
+
+**Paso 4.4 — Enunciado:** Ejecuta `javap -c Suma` y localiza en `main` instrucciones relacionadas con los valores, la suma y la salida.
+
+**Resultado:**
+
+```bash
+<!-- Escribe el comando utilizado. -->
+```
+
+Incluye también un fragmento de la salida de `javap -c Suma`:
+
+```text
+<!-- Pega aquí el fragmento relevante. -->
+```
+
 
 ### Ejercicio 3: modificar los operandos y reconstruir
 
